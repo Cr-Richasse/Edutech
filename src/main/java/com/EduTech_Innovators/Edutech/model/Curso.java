@@ -7,23 +7,15 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GerenteClases {
+public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int rut;
-    private int dv;
-    private String nombres;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String email;
-    private Date fechaNacimiento;
-    private String nombreUsuario;
-    private int acceso;
+    private String nombreCurso;
+    private String descripcionCurso;
+    private int capacidadAlumnos;
 }
