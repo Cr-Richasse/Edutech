@@ -6,7 +6,7 @@ import java.util.list;
 public class adminService{
  public adminService(
  public user Actualizar(Usuario usuario)
-  Usuario usuario=
+  Usuario usuario=UsuarioRepository.findby
   
 
 
