@@ -4,11 +4,18 @@ import com.Edutech.Repository.Usuario.java;
 import java.util.list;
 
 public class adminService{
- public adminService(
- public user Actualizar(Usuario actualizado)
+ 
+ public Usuario Actualizar(Usuario actualizado){
   Usuario usuario=UsuarioRepository.findById(id);
-  usuario.setEmail(actualizado.getEmail());
-  usuario.set
+  usuario.setemail(actualizado.getemail());
+  usuario.setnombres(actualizado.getnombres());
+  usuario.setapellidoPaterno(actualizado.getapellidoPaterno());
+  usuario.setapellidoMaterno(actualizado.getapellidoMaterno());
+ }
+ public Usuario Eliminar(id){
+  
+  
+
 
   
 
