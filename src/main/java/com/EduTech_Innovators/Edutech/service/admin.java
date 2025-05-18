@@ -1,4 +1,8 @@
-
+private UsuarioRepositorio usuario repositorio
+public adminService
+public user Actualizar(Usuario usuario)
+  Usuario usuario=
+  
 
 
 
