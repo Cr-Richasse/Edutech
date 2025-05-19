@@ -15,6 +15,7 @@ public class adminService{
  public Usuario Eliminar(id){
   usuarioRepository.deleteById(id)
    }
+ 
   
   
 
