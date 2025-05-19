@@ -17,5 +17,6 @@ public class Curso {
     private int id;
     private String nombreCurso;
     private String descripcionCurso;
+    private int precioCurso;
     private int capacidadAlumnos;
 }
