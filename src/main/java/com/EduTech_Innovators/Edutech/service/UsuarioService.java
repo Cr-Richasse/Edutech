@@ -1,7 +1,9 @@
-package com.Edutech.service.UsuarioService.java;
+package com.EduTech_Innovators.Edutech.service;
+import com.EduTech_Innovators.Edutech.model.Usuario;
+import com.EduTech_Innovators.Edutech.repository.UsuarioRepository;
 import com.Edutech.model.Usuario.java;
 import com.Edutech.repository.Usuario.java;
-import java.util.list;
+import java.util.List;
 
 public class UsuarioService(){
   private UsuarioRepository usuarioRepository;

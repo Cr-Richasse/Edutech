@@ -1,11 +1,13 @@
 package com.EduTech_Innovators.Edutech.service;
 import com.EduTech_Innovators.Edutech.model.Usuario;
-import com.Edutech.model.user;
-import com.Edutech.repository.Usuario.java;
-import java.util.list;
+import com.EduTech_Innovators.Edutech.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class adminService{
- private final UsuarioRepository usuarioRepository
+@Service
+public class AdminService{
+ @Autowired
+ private final UsuarioRepository usuarioRepository;
 
  public AdminService(UsuarioRepository usuarioRepository) {
   this.usuarioRepository = usuarioRepository;
