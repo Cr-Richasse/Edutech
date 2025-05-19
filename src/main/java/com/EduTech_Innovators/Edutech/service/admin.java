@@ -16,6 +16,10 @@ public class adminService{
   usuarioRepository.deleteById(id)
    }
  
+ public Usuario crearUsuario(Usuario usuario){
+  usuario.setacceso(true);
+  return UsuarioRepository.set(usuario);
+
   
   
 
