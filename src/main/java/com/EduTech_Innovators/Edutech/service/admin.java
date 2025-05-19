@@ -7,7 +7,7 @@ public class adminService{
  private final UsuarioRepository usuarioRepository
 
  public AdminService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
+  this.usuarioRepository = usuarioRepository;
  }
  
  public Usuario Actualizar(Usuario actualizado){

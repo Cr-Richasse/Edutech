@@ -17,8 +17,9 @@ public class CursoService {
     }
 
 
-    public Curso crearCurso(Curso curso) {
-        return cursoRepository.save(curso);
+    public String crearCurso(Curso curso) {
+        cursoRepository.save(curso);
+        return "Curso creado con éxito";
     }
 
 
@@ -44,8 +45,9 @@ public class CursoService {
         return null;
     }
 
-    public void eliminarCurso(Integer id) {
+    public String eliminarCursoPorId(Integer id) {
         cursoRepository.deleteById(id);
+        return "Curso" + id + "eliminado con éxito";
     }
 }
 
