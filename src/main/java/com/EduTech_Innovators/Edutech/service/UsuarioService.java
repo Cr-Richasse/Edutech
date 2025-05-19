@@ -4,9 +4,14 @@ import com.Edutech.repository.Usuario.java;
 import java.util.list;
 
 public class UsuarioService(){
-  private UsuarioRepository usuarioRepository;
-
+  private UsuarioRepository usuarioRepository(){;
+}
   public Usuario crearCuenta(Usuario usuarioNuevo){
-    Usuario.setEmail(usuarioNuevo.getEmail());
-    Usuario.setnombres(usuarioNuevo.getnombres());
-    
+   Usuario.setEmail(usuarioNuevo.getEmail());
+  
+   usuario.setnombres(usuarioNuevo.getnombres());
+   usuario.setapellidoPaterno(usuarioNuevo.getapellidoPaterno());
+   usuario.setapellidoMaterno(usuarioNuevo.getapellidoMaterno());
+ }
+ public Usuario activarCuenta(   
+}
