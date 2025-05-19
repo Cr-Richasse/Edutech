@@ -25,5 +25,5 @@ public class Usuario {
     private String email;
     private Date fechaNacimiento;
     private String nombreUsuario;
-    private int acceso;
+    private boolean acceso;
 }
