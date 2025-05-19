@@ -1,4 +1,5 @@
-package com.Edutech.service.admin.java;
+package com.EduTech_Innovators.Edutech.service;
+import com.EduTech_Innovators.Edutech.model.Usuario;
 import com.Edutech.model.user;
 import com.Edutech.repository.Usuario.java;
 import java.util.list;
