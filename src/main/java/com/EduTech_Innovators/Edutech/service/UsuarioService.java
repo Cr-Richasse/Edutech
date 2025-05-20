@@ -1,19 +1,20 @@
 package com.EduTech_Innovators.Edutech.service;
 import com.EduTech_Innovators.Edutech.model.Usuario;
 import com.EduTech_Innovators.Edutech.repository.UsuarioRepository;
-import com.Edutech.model.Usuario.java;
-import com.Edutech.repository.Usuario.java;
 import java.util.List;
 
-public class UsuarioService(){
-  private UsuarioRepository usuarioRepository(){;
-}
-  public Usuario crearCuenta(Usuario usuarioNuevo){
-   Usuario.setEmail(usuarioNuevo.getEmail());
-  
-   usuario.setnombres(usuarioNuevo.getnombres());
-   usuario.setapellidoPaterno(usuarioNuevo.getapellidoPaterno());
-   usuario.setapellidoMaterno(usuarioNuevo.getapellidoMaterno());
- }
- public Usuario activarCuenta(   
+public class UsuarioService {
+    private final UsuarioRepository usuarioRepository;
+
+    public UsuarioService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
+    public Usuario crearCuenta(Usuario usuarioNuevo) {
+        Usuario usuario = new Usuario();
+        usuario.setEmail(usuarioNuevo.getEmail());
+        usuario.setNombres(usuarioNuevo.getNombres());
+        usuario.setApellidoPaterno(usuarioNuevo.getApellidoPaterno());
+        usuario.setApellidoMaterno(usuarioNuevo.getApellidoMaterno());
+        return usuarioRepository.save(usuario);
+    }
 }

@@ -4,6 +4,7 @@ import com.EduTech_Innovators.Edutech.model.Curso;
 import com.EduTech_Innovators.Edutech.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/curso")
@@ -13,9 +14,8 @@ public class CursoController {
     private CursoService cursoService;
 
     @GetMapping
-    public String obtenerCursos() {
-        cursoService.obtenerCursos();
-        return "Lista de cursos";
+    public List<Curso> obtenerCursos() {
+        return cursoService.obtenerCursos();
     }
 
     @GetMapping("/{id}")
@@ -25,8 +25,7 @@ public class CursoController {
 
     @PostMapping
     public String crearCurso(@RequestBody Curso curso) {
-        cursoService.crearCurso(curso);
-        return "Curso creado con éxito";
+        return cursoService.crearCurso(curso);
     }
 
     @DeleteMapping("/{id}")
