@@ -20,19 +20,23 @@ public class GerenteClasesService {
         gerenteClasesRepository.save(gerente);
         return "se creó con exito";
     }
-    public List<GerenteClases> obtenerGerente(){
+    public List<GerenteClases> obtenerGerentes(){
         return gerenteClasesRepository.findAll();
     }
     public GerenteClases obtenerGerente(int id){
         return gerenteClasesRepository.findById(id).orElse(null);
     }
-    public GerenteClases actuGerente(GerenteClases gerente){
-        GerenteClases gerenteClases = gerenteClasesRepository.findById(gerente.getId()).orElse(null);
+
+    public GerenteClases actuGerente(int id, GerenteClases gerente){
+        GerenteClases gerenteClases = gerenteClasesRepository.findById(id).orElse(null);
         if(gerenteClases != null){
-            gerenteClases.setEmail(gerente.getEmail());
+            gerenteClases.setRut(gerente.getRut());
+            gerenteClases.setDv(gerente.getDv());
             gerenteClases.setNombres(gerente.getNombres());
             gerenteClases.setApellidoPaterno(gerente.getApellidoPaterno());
             gerenteClases.setApellidoMaterno(gerente.getApellidoMaterno());
+            gerenteClases.setEmail(gerente.getEmail());
+            gerenteClases.setFechaNacimiento(gerente.getFechaNacimiento());
             gerenteClases.setNombreUsuario(gerente.getNombreUsuario());
             gerenteClases.setAcceso(gerente.getAcceso());
             return gerenteClasesRepository.save(gerenteClases);
