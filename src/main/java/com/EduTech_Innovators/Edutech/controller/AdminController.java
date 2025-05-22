@@ -14,5 +14,8 @@ public class AdminController{
     return adminService.crearUsuario(usuario);
   }
   @DeleteMapping
-  public String Eliminar(int id{
+  public String Eliminar(int id){
+    return adminService.Eliminar(id);
+  }
+  
   
