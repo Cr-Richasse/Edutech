@@ -9,5 +9,10 @@ import java.util.List;
 public class AdminController{
   @Autowired
   private AdminService adminService;
-  @GetMapping
+  @PostMapping
+  public Usuario crearUsuario(Usuario usuario){
+    return adminService.crearUsuario(usuario);
+  }
+  @DeleteMapping
+  public String Eliminar(int id{
   
