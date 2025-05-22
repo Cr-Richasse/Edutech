@@ -25,13 +25,16 @@ public class ProfesorService {
     public Profesor getProfesor(int id) {
         return profesorRepository.findById(id).orElse(null);
     }
-    public Profesor actProfesor(Profesor profesor) {
-        Profesor prof = profesorRepository.findById(profesor.getId()).orElse(null);
-        if (prof!= null) {
-            prof.setEmail(profesor.getEmail());
+    public Profesor actProfesor(int id, Profesor profesor) {
+        Profesor prof = profesorRepository.findById(id).orElse(null);
+        if (prof != null) {
+            prof.setRut(prof.getRut());
+            prof.setDv(prof.getDv());
             prof.setNombres(profesor.getNombres());
             prof.setApellidoPaterno(profesor.getApellidoPaterno());
             prof.setApellidoMaterno(profesor.getApellidoMaterno());
+            prof.setEmail(profesor.getEmail());
+            prof.setFechaNacimiento(profesor.getFechaNacimiento());
             prof.setNombreUsuario(profesor.getNombreUsuario());
             prof.setAcceso(profesor.getAcceso());
             return profesorRepository.save(prof);
