@@ -18,4 +18,7 @@ public class AdminController{
     return adminService.Eliminar(id);
   }
   
-  
+  @PutMapping
+  public Usuario Actualizar(Usuario actualizado){
+    return adminService.Actualizar(Usuario actualizado);
+  }
