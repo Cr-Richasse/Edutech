@@ -14,7 +14,7 @@ public class UsuarioController {
     return usuarioService.obtenerUsuarios();
   }
   @PostMapping
-  public Usuario crearCuenta(Usuario usuarioNuevo){
+  public Usuario crearCuenta(@RequestBody Usuario usuarioNuevo){
     return usuarioService.crearCuenta(usuarioNuevo);
   }
 
