@@ -10,8 +10,8 @@ public class AdminController{
   @Autowired
   private AdminService adminService;
   @PostMapping
-  public Usuario crearUsuario(Usuario usuario){
-    return adminService.crearUsuario(usuario);
+  public Usuario crearUsuario(Admin admin){
+    return adminService.crearUsuario(admin);
   }
   @DeleteMapping
   public String Eliminar(int id){
@@ -20,5 +20,5 @@ public class AdminController{
   
   @PutMapping
   public Usuario Actualizar(Usuario actualizado){
-    return adminService.Actualizar(Usuario actualizado);
+    return adminService.Actualizar(Admin actualizado);
   }
