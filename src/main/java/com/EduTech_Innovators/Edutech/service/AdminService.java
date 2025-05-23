@@ -14,7 +14,7 @@ public class AdminService{
         this.usuarioRepository = usuarioRepository;
     }
 
-    public Usuario Actualizar(Usuario actualizado){
+    public Usuario actualizar(Usuario actualizado){
         Usuario usuario=usuarioRepository.findById(actualizado.getId()).get();
         usuario.setEmail(actualizado.getEmail());
         usuario.setNombres(actualizado.getNombres());
@@ -24,7 +24,7 @@ public class AdminService{
         return usuarioRepository.save(usuario);
     }
 
-    public String Eliminar(int id){
+    public String eliminar(int id){
         usuarioRepository.deleteById(id);
         return "Eliminado";
     }
