@@ -16,6 +16,10 @@ public class AdminController {
 
   @GetMapping
   public List<Admin> getAdmins() {return adminService.getAdmins();}
+
+  @GetMapping("/{id}")
+  public Admin getAdmin(@PathVariable int id) {return adminService.getAdmin(id);}
+
   @PostMapping
   public String crearUsuario(@RequestBody Admin admin) {
     return adminService.crearUsuario(admin);

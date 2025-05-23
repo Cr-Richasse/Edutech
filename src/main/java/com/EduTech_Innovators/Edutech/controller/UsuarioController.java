@@ -21,7 +21,12 @@ public class UsuarioController {
   public Usuario crearCuenta(@RequestBody Usuario usuarioNuevo) {
     return usuarioService.crearCuenta(usuarioNuevo);
   }
-  @DeleteMapping
+  @DeleteMapping("/{id}")
+  public String eliminarUsuario(@PathVariable int id) {return usuarioService.deleteUsuario(id);}
+  @PutMapping("/{id}")
+  public Usuario actualizarUsuario(@PathVariable int id, @RequestBody Usuario usuarioNuevo) {
+    return usuarioService.crearCuenta(usuarioNuevo);
+  }
 }
 
   

@@ -20,6 +20,8 @@ public class AdminService{
     }
     public List<Admin> getAdmins() {return adminRepository.findAll();}
 
+    public Admin getAdmin(int id) {return adminRepository.findById(id).orElse(null);}
+
     public Admin actualizar(Admin actualizado){
         Admin usuario=adminRepository.findById(actualizado.getId()).get();
         usuario.setEmail(actualizado.getEmail());
