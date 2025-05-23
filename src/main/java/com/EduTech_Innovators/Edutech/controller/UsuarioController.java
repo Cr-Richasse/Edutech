@@ -13,6 +13,10 @@ public class UsuarioController {
   public List<Usuario> obtenerUsuarios(){
     return usuarioService.obtenerUsuarios();
   }
+  @PostMapping
+  public Usuario crearCuenta(Usuario usuarioNuevo){
+    return usuarioService.crearCuenta(usuarioNuevo);
+  }
 
   
   
