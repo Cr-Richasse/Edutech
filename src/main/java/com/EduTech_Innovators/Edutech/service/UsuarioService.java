@@ -26,4 +26,8 @@ public class UsuarioService {
         usuario.setApellidoMaterno(usuarioNuevo.getApellidoMaterno());
         return usuarioRepository.save(usuario);
     }
+    public String deleteUsuario(int id) {
+        usuarioRepository.deleteById(id);
+        return "Usuario eliminado";
+    }
 }

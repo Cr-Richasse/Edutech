@@ -6,24 +6,28 @@ import com.EduTech_Innovators.Edutech.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
   @Autowired
   private AdminService adminService;
 
+  @GetMapping
+  public List<Admin> getAdmins() {return adminService.getAdmins();}
   @PostMapping
-  public Usuario crearUsuario(@RequestBody Usuario admin) {
+  public String crearUsuario(@RequestBody Admin admin) {
     return adminService.crearUsuario(admin);
   }
 
-  @DeleteMapping
+  @DeleteMapping("/{id}")
   public String Eliminar(int id) {
     return adminService.eliminar(id);
   }
 
-  @PutMapping
-  public Usuario Actualizar(@PathVariable int id, Usuario actualizado) {
+  @PutMapping("/{id}")
+  public Admin Actualizar(@PathVariable int id, Admin actualizado) {
     actualizado.setId(id);
     return adminService.actualizar(actualizado);
   }
