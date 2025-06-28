@@ -23,6 +23,7 @@ public class Informe {
     private String descripcion;
     private String nombreCurso;
     private String descripcionCurso;
+    private String nombreProfesor;
     private String nombreUsuario;
     private String rutUsuario;
     private double nota1;
