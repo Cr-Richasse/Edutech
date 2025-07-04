@@ -13,26 +13,33 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
+
 
 @SpringBootTest
 @AutoConfigureMockMvc
 public class CursoTest {
-    @Autowired
+    @MockBean
     CursoRepository cursoRepository;
 
     @Autowired
     MockMvc mockMvc;
 
-    @MockBean
+    @Autowired
     CursoService cursoService;
 
     @Test
-    @DisplayName("")
     public void testFindAll(){
-        when(cursoRepository.findAll()).thenReturn(List.of(new Curso()));
-        /**List<Curso>cursos= cursoService
-         *
-         */
+        when(cursoRepository.findAll()).thenReturn(List.of(new Curso(1,"Lenguaje","008D",19000,20)));
+        List<Curso>cursos= cursoService.obtenerCursos();
+        assertNotNull(cursos);
+        assertEquals(1,cursos.size());
+    }
+    @Test
+    void testFindCurso(){
+        Curso prueba = cursoRepository.findById(1).get();
+        assertNotNull(prueba);
+        assertEquals(19000,prueba.getPrecioCurso());
     }
 }
