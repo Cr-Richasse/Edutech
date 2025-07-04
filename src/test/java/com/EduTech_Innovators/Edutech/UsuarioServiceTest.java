@@ -25,6 +25,8 @@ public class UsuarioServiceTest {
     public void testFindAll() {
         when(usuarioRepository.findAll()).thenReturn(List.of(new Usuario(1,12345678,6,"Benja","Musk","Gutierrez","Ben889_@gmail.cl",null,"BenMuGut",true)));
         List<Usuario>usuarios=usuarioService.obtenerUsuarios();
+        assertNotNull(usuarios);
+        assertEquals(1,usuarios.size());
     }
 
 }
